@@ -40,13 +40,13 @@ export const data = {
     { icon: '🏢', title: 'Current role', text: 'Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia. I build data pipelines and automation for the Accounts Receivable team across Latin America.' },
     { icon: '🎓', title: 'Education', text: "Bachelor's Degree in Software Engineering at Universidad Técnica Nacional (2025 – Present). Associate's Degree in Information Technologies, 2025." },
     { icon: '📍', title: 'Location', text: 'Alajuela, Costa Rica. Open to remote roles worldwide and hybrid positions in the Greater Metropolitan Area.' },
-    { icon: '🗣️', title: 'Languages', text: 'Spanish (native) · English B2+ (upper-intermediate). All documentation and portfolio content in English.' },
+    { icon: '🗣️', title: 'Languages', text: 'Spanish (native) · English C1 Advanced (EF SET Certified). All documentation and portfolio content in English.' },
   ],
   // value/suffix split so the hero stats can animate with a count-up effect
   stats: [
     { value: 11, suffix: '', label: 'Projects published' },
     { value: 100, suffix: 'k+', label: 'Records per dataset' },
-    { value: 9, suffix: '', label: 'Certifications' },
+    { value: 14, suffix: '', label: 'Certifications' },
   ],
   // Impact section — animated metric cards (between About and Experience)
   impact: [
@@ -226,15 +226,12 @@ export const data = {
     { category: 'Cloud & DevOps', items: ['Google Cloud (in training)', 'Docker', 'Git', 'GitHub'] },
   ],
   certifications: [
-    { name: 'Data Analytics Essentials', issuer: 'Cisco Networking Academy', date: 'May 2026', icon: '📊' },
-    { name: 'Introduction to Data Science', issuer: 'Cisco Networking Academy', date: 'May 2026', icon: '🔬' },
-    { name: 'Fundamentos de Machine Learning', issuer: 'Capacítate para el Empleo / Fundación Carlos Slim', date: 'May 2026', icon: '🤖' },
-    { name: 'Python Essentials 1 & 2', issuer: 'Cisco Networking Academy / Python Institute', date: 'Feb 2026', icon: '🐍' },
-    { name: 'Power BI Dual Certification', issuer: 'Udemy + Santander Open Academy', date: 'Jan–May 2025', icon: '📈' },
-    { name: 'JavaScript Essentials 2', issuer: 'Cisco Networking Academy / JavaScript Institute', date: 'Mar 2025', icon: '⚡' },
-    { name: 'Network Technician Career Path', issuer: 'Cisco Networking Academy', date: 'Jun 2025', icon: '🌐' },
-    { name: 'English for IT 1', issuer: 'Cisco Networking Academy', date: 'Aug 2025', icon: '🗣️' },
-    { name: 'Google Cloud Computing Foundations', issuer: 'Google Cloud Career Launchpad LATAM', date: 'In progress', icon: '☁️' },
+    { name: 'Data Analytics Essentials', issuer: 'Cisco Networking Academy', date: 'May 2026', link: 'https://www.credly.com/badges/239d5ec2-98dd-4492-9acb-3cf0f5104f56' },
+    { name: 'Python Essentials 1 & 2', issuer: 'Cisco Networking Academy / Python Institute', date: 'Feb 2026', link: 'https://www.credly.com/badges/e410d246-8b0a-4fbb-b1e5-bd8c976fafa9' },
+    { name: 'Fundamentos de Machine Learning', issuer: 'Fundación Carlos Slim — Capacítate para el Empleo', date: 'May 2026', link: 'https://capacitateparaelempleo.org/verifica/07cb7a3e-81a9-4ccf-a02f-4fbd1a9e4171/54584cf3-2ba9-46c3-8451-2db69afe7fde' },
+    { name: 'Power BI Dual Certification', issuer: 'Udemy', date: 'January 2025', link: 'https://ude.my/UC-d7521e99-219d-45fe-ae30-b7cf896089eb' },
+    { name: 'Introduction to Data Science', issuer: 'Cisco Networking Academy', date: 'May 2026', link: 'https://www.credly.com/badges/0c81c19e-86bb-49e0-9d39-691e04f1ee8f' },
+    { name: 'EF SET Certificate — C1 Advanced', issuer: 'EF Education First', date: 'June 2026', link: 'https://cert.efset.org/es/YSh6id' },
   ],
   // Data behind the "Recruiter view" floating summary panel
   recruiterSummary: {

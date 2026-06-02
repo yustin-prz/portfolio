@@ -59,6 +59,20 @@ function Counter({ value, prefix = '', suffix = '', duration = 1600 }) {
   return <span ref={ref}>{prefix}{n}{suffix}</span>;
 }
 
+function CertCard({ c }) {
+  return (
+    <div className="cert-card">
+      <div className="cert-info">
+        <div className="cert-name">{c.name}</div>
+        <div className="cert-meta">{c.issuer} · {c.date}</div>
+      </div>
+      {c.link && (
+        <a className="cert-verify" href={c.link} target="_blank" rel="noreferrer">Verified ↗</a>
+      )}
+    </div>
+  );
+}
+
 function Section({ num, label, children }) {
   const [ref, visible] = useInView();
   return (
@@ -344,16 +358,7 @@ export default function App() {
       <div id="certifications">
         <Section num="06" label="Certifications">
           <div className="certs-grid">
-            {data.certifications.map((c, i) => (
-              <div key={i} className="cert-card">
-                <div className="cert-icon">{c.icon}</div>
-                <div className="cert-info">
-                  <div className="cert-name">{c.name}</div>
-                  <div className="cert-meta">{c.issuer} · {c.date}</div>
-                </div>
-                {c.date === 'In progress' && <div className="cert-badge">In progress</div>}
-              </div>
-            ))}
+            {data.certifications.map((c, i) => <CertCard key={i} c={c} />)}
           </div>
         </Section>
       </div>
