@@ -194,7 +194,7 @@
   .hero-stats { gap: 20px; }
   .section { padding: 52px 20px; }
   .about-grid, .projects-grid, .skills-grid, .certs-grid { grid-template-columns: 1fr; }
-  .impact-grid { grid-template-columns: repeat(2, 1fr); }
+  /* .impact-grid is handled in the mobile-overrides block at the end of the file */
   .contact-grid { grid-template-columns: 1fr; }
   .nav-recruiter { display: none; }
   .footer { flex-direction: column; gap: 8px; text-align: center; }
@@ -294,4 +294,20 @@
 
 @media (max-width: 480px) {
   .recruiter-panel { left: 16px; right: 16px; bottom: 16px; width: auto; }
+}
+
+/* ===== MOBILE OVERRIDES (must come after the base .impact-grid rule to win) ===== */
+@media (max-width: 900px) {
+  /* Impact base rule (repeat(4,1fr)) is defined later in the file than the
+     768px block, so it overrides it. Re-apply 2 columns here, after the base. */
+  .impact-grid { grid-template-columns: repeat(2, 1fr); }
+  .impact-card { padding: 22px 18px; }
+}
+
+@media (max-width: 480px) {
+  .impact-grid { gap: 10px; }
+  .impact-card { padding: 18px 16px; }
+  .impact-num { font-size: 30px; }
+  .impact-label { font-size: 13px; }
+  .impact-sub { font-size: 11px; }
 }
