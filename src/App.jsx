@@ -160,6 +160,7 @@ export default function App() {
         <div className="hero-glow" />
         <div className="hero-glow hero-glow--two" />
         <div className="hero-grid" />
+        <div className="hero-inner">
         <div className="hero-content">
           <div className="hero-badge">
             <span className="hero-dot" />
@@ -189,6 +190,33 @@ export default function App() {
             <a href={data.github} target="_blank" rel="noreferrer" className="btn-secondary">github.com/yustin-prz ↗</a>
           </div>
         </div>
+
+        <a href={`https://${data.heroSnippet.repo}`} target="_blank" rel="noreferrer" className="hero-terminal" aria-label="View source on GitHub">
+          <div className="term-bar">
+            <span className="term-dot term-dot--r" />
+            <span className="term-dot term-dot--y" />
+            <span className="term-dot term-dot--g" />
+            <span className="term-file">{data.heroSnippet.file}</span>
+            <span className="term-tag">DAG</span>
+          </div>
+          <div className="term-body">
+            {data.heroSnippet.lines.map((line, i) => (
+              <div className="term-line" key={i}>
+                <span className="term-ln">{i + 1}</span>
+                <span className="term-code">
+                  {line.length === 0
+                    ? ' '
+                    : line.map((tok, j) => <span key={j} className={`tk tk--${tok.c || 'plain'}`}>{tok.t}</span>)}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="term-foot">
+            <span className="term-foot-dot" /> {data.heroSnippet.repo}
+          </div>
+        </a>
+        </div>
+
         <div className="hero-scroll">
           <span>scroll</span>
           <div className="hero-scroll-line" />
@@ -199,12 +227,7 @@ export default function App() {
       <div id="about">
         <Section num="01" label="About">
           <div className="about-grid">
-            {[
-              { icon: '🏢', title: 'Current role', text: 'RPA/Innovation Intern at DHL Shared Service Center, Heredia CR. Working with the AR team on data pipelines and automation across 9+ countries.' },
-              { icon: '🎓', title: 'Education', text: "Bachelor's in Software Engineering at Universidad Técnica Nacional (expected 2027). Associate's in Information Technologies, 2025." },
-              { icon: '📍', title: 'Location', text: 'Alajuela, Costa Rica. Open to remote roles worldwide and hybrid positions in the Greater Metropolitan Area.' },
-              { icon: '🗣️', title: 'Languages', text: 'Spanish (native) · English B2+ (professional proficiency). All documentation and portfolio content in English.' },
-            ].map((c, i) => (
+            {data.about.map((c, i) => (
               <div key={i} className="about-card reveal" style={{ '--i': i }}>
                 <div className="about-card-icon">{c.icon}</div>
                 <div className="about-card-title">{c.title}</div>
