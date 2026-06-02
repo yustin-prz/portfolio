@@ -232,7 +232,7 @@ export const data = {
     { name: 'Fundamentos de Machine Learning', issuer: 'Fundación Carlos Slim — Capacítate para el Empleo', date: 'May 2026', icon: '🤖', link: 'https://capacitateparaelempleo.org/verifica/07cb7a3e-81a9-4ccf-a02f-4fbd1a9e4171/54584cf3-2ba9-46c3-8451-2db69afe7fde' },
     { name: 'Power BI Dual Certification', issuer: 'Udemy', date: 'January 2025', icon: '📈', link: 'https://ude.my/UC-d7521e99-219d-45fe-ae30-b7cf896089eb' },
     { name: 'Introduction to Data Science', issuer: 'Cisco Networking Academy', date: 'May 2026', icon: '🔬', link: 'https://www.credly.com/badges/0c81c19e-86bb-49e0-9d39-691e04f1ee8f' },
-    { name: 'EF SET Certificate — C1 Advanced', issuer: 'EF Education First', date: 'June 2026', icon: '🗣️', link: 'https://cert.efset.org/es/YSh6id' },
+    { name: 'EF SET Certificate — C1 Advanced', issuer: 'EF Education First', date: 'June 2026', icon: '🗣️', link: 'https://cert.efset.org/YSh6id' },
     { name: 'Google Cloud Computing Foundations', issuer: 'Google Cloud Career Launchpad LATAM', date: 'In progress', icon: '☁️' },
   ],
   // Data behind the "Recruiter view" floating summary panel
