@@ -60,15 +60,17 @@ function Counter({ value, prefix = '', suffix = '', duration = 1600 }) {
 }
 
 function CertCard({ c }) {
+  const inProgress = c.date === 'In progress';
   return (
     <div className="cert-card">
+      <div className="cert-icon">{c.icon || '📜'}</div>
       <div className="cert-info">
         <div className="cert-name">{c.name}</div>
         <div className="cert-meta">{c.issuer} · {c.date}</div>
       </div>
-      {c.link && (
-        <a className="cert-verify" href={c.link} target="_blank" rel="noreferrer">Verified ↗</a>
-      )}
+      {inProgress
+        ? <span className="cert-badge">In progress</span>
+        : c.link && <a className="cert-verify" href={c.link} target="_blank" rel="noreferrer">Verified ↗</a>}
     </div>
   );
 }
