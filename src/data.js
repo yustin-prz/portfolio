@@ -46,7 +46,7 @@ export const data = {
   stats: [
     { value: 11, suffix: '', label: 'Projects published' },
     { value: 100, suffix: 'k+', label: 'Records per dataset' },
-    { value: 14, suffix: '', label: 'Certifications' },
+    { value: 6, suffix: '', label: 'Certifications' },
   ],
   // Impact section — animated metric cards (between About and Experience)
   impact: [
