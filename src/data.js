@@ -228,7 +228,7 @@ export const data = {
   // 6 verified certs (with credential links) + Google Cloud shown as "In progress"
   certifications: [
     { name: 'Data Analytics Essentials', issuer: 'Cisco Networking Academy', date: 'May 2026', icon: '📊', link: 'https://www.credly.com/badges/239d5ec2-98dd-4492-9acb-3cf0f5104f56' },
-    { name: 'Python Essentials 2', issuer: 'Cisco Networking Academy / Python Institute', date: 'Feb 2026', icon: '🐍', link: 'https://www.credly.com/badges/e471d3e6-e81c-4dd6-8be1-f3097ed30ba7' },
+    { name: 'Python Essentials 2', issuer: 'Cisco Networking Academy / Python Institute', date: 'Feb 2026', icon: '🐍', link: 'https://www.credly.com/badges/60151291-fd02-401c-8d61-2a6e97c99e9f' },
     { name: 'Fundamentos de Machine Learning', issuer: 'Fundación Carlos Slim — Capacítate para el Empleo', date: 'May 2026', icon: '🤖', link: 'https://capacitateparaelempleo.org/verifica/07cb7a3e-81a9-4ccf-a02f-4fbd1a9e4171/54584cf3-2ba9-46c3-8451-2db69afe7fde' },
     { name: 'Power BI Dual Certification', issuer: 'Udemy', date: 'January 2025', icon: '📈', link: 'https://ude.my/UC-d7521e99-219d-45fe-ae30-b7cf896089eb' },
     { name: 'Introduction to Data Science', issuer: 'Cisco Networking Academy', date: 'May 2026', icon: '🔬', link: 'https://www.credly.com/badges/0c81c19e-86bb-49e0-9d39-691e04f1ee8f' },
