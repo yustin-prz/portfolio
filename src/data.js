@@ -2,15 +2,54 @@ export const data = {
   name: 'Yustin Eduardo Pérez Castro',
   title: 'Data Analyst & Data Engineer in Training',
   subtitle: 'Building end-to-end data solutions · Python · SQL · Power BI · dbt · Kafka',
-  bio: 'Software Engineering student with hands-on experience in data analysis, ETL pipelines, and ML. Currently at DHL Shared Service Center processing 100,000+ records for the AR team across Central and South America. 11 projects, all open source.',
+  // Rotating phrases for the hero typewriter effect
+  heroRoles: [
+    'Data Engineering Intern @ DHL',
+    'ETL · dbt · Kafka · Airflow',
+    '100k+ Records Processed Daily',
+  ],
+  bio: 'Software Engineering student who turns raw data into production pipelines and decisions. I process 100,000+ records daily for DHL\'s Accounts Receivable team across 9 countries, where I re-engineered a critical pipeline and cut its runtime by 75%. I ship end-to-end data systems — orchestrated with Airflow, streamed with Kafka, modeled with dbt — backed by 11 open-source projects.',
   email: 'perezcastroyus23@gmail.com',
   linkedin: 'https://linkedin.com/in/yustin-prz',
   github: 'https://github.com/yustin-prz',
   location: 'Alajuela, Costa Rica',
+  // value/suffix split so the hero stats can animate with a count-up effect
   stats: [
-    { num: '11+', label: 'Projects published' },
-    { num: '100k+', label: 'Records processed daily' },
-    { num: '9+', label: 'Certifications' },
+    { value: 11, suffix: '+', label: 'Projects published' },
+    { value: 100, suffix: 'k+', label: 'Records processed daily' },
+    { value: 9, suffix: '+', label: 'Certifications' },
+  ],
+  // Impact section — animated metric cards (between About and Experience)
+  impact: [
+    {
+      icon: '⚡',
+      prefix: '-',
+      value: 75,
+      suffix: '%',
+      label: 'Pipeline execution time',
+      sub: 'Re-engineered the AR pipeline at DHL',
+    },
+    {
+      icon: '🌎',
+      value: 9,
+      suffix: '',
+      label: 'Countries scaled',
+      sub: 'Across Central & South America',
+    },
+    {
+      icon: '🗄️',
+      value: 100,
+      suffix: 'k+',
+      label: 'Records processed daily',
+      sub: 'For the Accounts Receivable team',
+    },
+    {
+      icon: '✅',
+      value: 11,
+      suffix: '/11',
+      label: 'Data quality tests passing',
+      sub: 'dbt warehouse — all green',
+    },
   ],
   experience: [
     {
@@ -20,7 +59,12 @@ export const data = {
       date: '2025 – Present',
       active: true,
       tech: ['Python', 'SQL', 'Power BI', 'Selenium', 'Power Apps', 'Excel VBA'],
-      desc: 'Built data pipelines processing 100,000+ records for the Accounts Receivable team. Re-engineered a critical pipeline reducing execution time by 75%. Solution scaling to 9 countries across South America including Argentina, Chile, Colombia, Peru and Brazil.',
+      bullets: [
+        'Built ETL pipelines in Python and SQL that process 100,000+ records daily for the Accounts Receivable team.',
+        'Re-engineered a critical pipeline, cutting execution time by 75% — from hours to minutes.',
+        'Scaled the solution to 9 countries across Central and South America, including Argentina, Chile, Colombia, Peru and Brazil.',
+        'Automated manual reporting with Power BI, Selenium and Power Apps, eliminating hours of repetitive analyst work each week.',
+      ],
     },
     {
       company: 'Freelance Web Developer',
@@ -29,13 +73,19 @@ export const data = {
       date: '2023 – 2024',
       active: false,
       tech: ['JavaScript', 'MySQL', 'C#', 'HTML/CSS'],
-      desc: 'Designed relational databases and built data visualization components for client business performance dashboards. Managed full project lifecycle from requirements to delivery.',
+      bullets: [
+        'Designed relational databases and delivered business performance dashboards for multiple client companies.',
+        'Built data visualization components that turned raw sales data into actionable KPIs.',
+        'Managed the full project lifecycle from requirements gathering to production delivery.',
+      ],
     },
   ],
+  // category drives the Projects filters; type stays as the display label
   projects: [
     {
       emoji: '🍽️',
       type: 'Full Stack · In Progress',
+      category: 'Backend',
       name: 'SnackFlow',
       desc: 'Full stack food ordering application currently in active development. Frontend, backend and database layers with Docker containerization.',
       tech: ['JavaScript', 'Node.js', 'Docker', 'PostgreSQL'],
@@ -45,6 +95,7 @@ export const data = {
     {
       emoji: '🤖',
       type: 'ML · Web App',
+      category: 'ML',
       name: 'CryptoEdu Platform',
       desc: 'Educational ML platform with Prophet + XGBoost, interactive lessons, backtesting simulator and 10-question quiz. 4-page Streamlit web app with real-time data.',
       tech: ['Python', 'XGBoost', 'Prophet', 'Streamlit', 'PostgreSQL'],
@@ -53,6 +104,7 @@ export const data = {
     {
       emoji: '⚡',
       type: 'Real-Time Streaming',
+      category: 'Data Engineering',
       name: 'Kafka Crypto Streaming',
       desc: 'Producer/consumer pipeline processing 8 concurrent crypto price streams per second. 650+ events per session persisted to PostgreSQL with Kafka UI monitoring.',
       tech: ['Apache Kafka', 'Docker', 'PostgreSQL', 'Python'],
@@ -61,6 +113,7 @@ export const data = {
     {
       emoji: '🏗️',
       type: 'Data Warehouse',
+      category: 'Data Engineering',
       name: 'dbt + DuckDB Warehouse',
       desc: 'Staging + marts architecture across 23 source tables (38,865 rows). 4 transformation models, 11 automated data quality tests (all passing). Full lineage documentation.',
       tech: ['dbt', 'DuckDB', 'SQL', 'Python'],
@@ -69,6 +122,7 @@ export const data = {
     {
       emoji: '🔄',
       type: 'ETL Orchestration',
+      category: 'Data Engineering',
       name: 'Airflow ETL Pipeline',
       desc: 'Daily DAG with extract, transform, load and validate tasks. Retry logic and data integrity checks on every run. Production-grade pipeline deployed on Docker.',
       tech: ['Airflow', 'Docker', 'Python', 'PostgreSQL'],
@@ -77,6 +131,7 @@ export const data = {
     {
       emoji: '📦',
       type: 'REST API · Backend',
+      category: 'Backend',
       name: 'Order Management API',
       desc: 'RESTful API for order management built with Node.js, Express and PostgreSQL. Full CRUD with layered architecture: routes, controllers, models and middleware validation.',
       tech: ['Node.js', 'Express', 'PostgreSQL', 'JavaScript'],
@@ -85,6 +140,7 @@ export const data = {
     {
       emoji: '🚗',
       type: 'Desktop App · C#',
+      category: 'Backend',
       name: 'RoadReady — Vehicle Inspection',
       desc: 'Vehicle inspection management system in C# (Windows Forms) with layered architecture, Factory Pattern, ADO.NET data access, role-based auth and RDLC report generation.',
       tech: ['C#', 'SQL Server', 'ADO.NET', 'Windows Forms'],
@@ -93,6 +149,7 @@ export const data = {
     {
       emoji: '📊',
       type: 'SQL Analysis',
+      category: 'BI & Analytics',
       name: 'Gold vs Economic Factors',
       desc: '8 business questions answered on 4,137-row financial dataset using advanced SQL: CTEs, LAG(), CORR(), FILTER WHERE and UNION ALL on PostgreSQL.',
       tech: ['PostgreSQL', 'SQL', 'SQLAlchemy', 'Python'],
@@ -101,6 +158,7 @@ export const data = {
     {
       emoji: '📈',
       type: 'Power BI · Analytics',
+      category: 'BI & Analytics',
       name: 'US GDP vs Public Debt',
       desc: 'Cleaned 295-row time series (1947–2020), resolved unit inconsistency, engineered 7 features. 3-page Power BI executive dashboard with KPI cards and trend analysis.',
       tech: ['Python', 'Pandas', 'Power BI', 'DAX'],
@@ -109,6 +167,7 @@ export const data = {
     {
       emoji: '🧠',
       type: 'Power BI · Dashboard',
+      category: 'BI & Analytics',
       name: 'Teen Mental Health',
       desc: 'Engineered composite wellbeing index and risk segmentation for 1,200 records. 4-page interactive Power BI dashboard with slicers and conditional formatting.',
       tech: ['Python', 'Power BI', 'DAX', 'Pandas'],
@@ -117,12 +176,15 @@ export const data = {
     {
       emoji: '🔍',
       type: 'Web Scraping · Analysis',
+      category: 'Data Engineering',
       name: 'CR Job Market Analysis',
       desc: 'Multi-source data collection pipeline using Selenium and JSearch API. Analyzes most demanded skills and top hiring companies in Costa Rica\'s data job market.',
       tech: ['Selenium', 'Python', 'JSearch API', 'Pandas'],
       url: 'https://github.com/yustin-prz/cr-jobs-market-analysis',
     },
   ],
+  // Order of the Projects filter tabs ("All" is prepended in the component)
+  projectFilters: ['Data Engineering', 'ML', 'BI & Analytics', 'Backend', 'In Progress'],
   skills: [
     { category: 'Data Engineering', items: ['Apache Airflow', 'Apache Kafka', 'dbt', 'Docker', 'ETL/ELT', 'SQLAlchemy'] },
     { category: 'Languages & SQL', items: ['Python (Pandas)', 'SQL (Advanced)', 'JavaScript', 'C#', 'Java'] },
@@ -144,4 +206,17 @@ export const data = {
     { name: 'English for IT 1', issuer: 'Cisco Networking Academy', date: 'Aug 2025', icon: '🗣️' },
     { name: 'Google Cloud Computing Foundations', issuer: 'Google Cloud Career Launchpad LATAM', date: 'In progress', icon: '☁️' },
   ],
+  // Data behind the "Recruiter view" floating summary panel
+  recruiterSummary: {
+    role: 'Data Engineer (in training) · Data Analyst',
+    availability: 'Open to internships & junior data roles — Costa Rica or remote',
+    topAchievement: 'Cut a production AR pipeline\'s runtime by 75% and scaled it to 9 countries at DHL.',
+    topSkills: ['Python', 'SQL', 'dbt', 'Airflow', 'Kafka', 'Power BI'],
+    metrics: [
+      { value: '-75%', label: 'Pipeline runtime' },
+      { value: '9', label: 'Countries scaled' },
+      { value: '100k+', label: 'Records / day' },
+      { value: '11/11', label: 'dbt tests passing' },
+    ],
+  },
 };
