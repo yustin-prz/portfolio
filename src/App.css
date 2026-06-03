@@ -235,8 +235,9 @@
 /* ===== PROJECT FILTERS ===== */
 .proj-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .proj-filter { font-size: 12px; font-family: var(--font-mono); color: var(--text-secondary); background: var(--bg-card); border: 0.5px solid var(--border); border-radius: 20px; padding: 7px 15px; cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s; }
-.proj-filter:hover { color: var(--accent); border-color: var(--accent-border); }
+.proj-filter:not(.proj-filter--active):hover { color: var(--accent); border-color: var(--accent-border); }
 .proj-filter--active { color: #03101f; background: var(--accent); border-color: var(--accent); font-weight: 700; }
+.proj-filter--active:hover { background: #7eb3fb; border-color: #7eb3fb; }
 
 /* ===== PROJECT CARD ENTRANCE (replays on filter change) ===== */
 .proj-card--in { animation: projIn 0.5s ease both; }
