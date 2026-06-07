@@ -34,9 +34,8 @@ export const data = {
   email: 'perezcastroyus23@gmail.com',
   linkedin: 'https://linkedin.com/in/yustin-prz',
   github: 'https://github.com/yustin-prz',
-  // Optional downloadable CV/resume. Drop a PDF in /public and set the path here
-  // (e.g. '/Yustin_Perez_CV.pdf'). When empty, the "Download CV" button is hidden.
-  resumeUrl: '',
+  // Downloadable CV/resume (PDF in /public). ATS-optimized, phone removed for privacy.
+  resumeUrl: '/Yustin_Perez_CV.pdf',
   location: 'Alajuela, Costa Rica',
   // About cards (kept here so no content is hardcoded in components)
   about: [
