@@ -34,6 +34,9 @@ export const data = {
   email: 'perezcastroyus23@gmail.com',
   linkedin: 'https://linkedin.com/in/yustin-prz',
   github: 'https://github.com/yustin-prz',
+  // Optional downloadable CV/resume. Drop a PDF in /public and set the path here
+  // (e.g. '/Yustin_Perez_CV.pdf'). When empty, the "Download CV" button is hidden.
+  resumeUrl: '',
   location: 'Alajuela, Costa Rica',
   // About cards (kept here so no content is hardcoded in components)
   about: [
@@ -110,13 +113,15 @@ export const data = {
       ],
     },
   ],
-  // category drives the Projects filters; type stays as the display label
+  // category drives the Projects filters; type stays as the display label.
+  // highlight = key measurable outcome shown prominently (recruiters scan for metrics).
   projects: [
     {
       emoji: '🍽️',
       type: 'Full Stack · In Progress',
       category: 'Backend',
       name: 'SnackFlow',
+      highlight: 'Dockerized 3-tier app',
       desc: 'Full stack food ordering application currently in active development. Frontend, backend and database layers with Docker containerization.',
       tech: ['JavaScript', 'Node.js', 'Docker', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/snackflow',
@@ -127,6 +132,7 @@ export const data = {
       type: 'ML · Web App',
       category: 'ML',
       name: 'CryptoEdu Platform',
+      highlight: '10 engineered features · 4-page app',
       desc: 'Educational ML platform with Prophet + XGBoost, interactive lessons, backtesting simulator and 10-question quiz. 4-page Streamlit web app with real-time data.',
       tech: ['Python', 'XGBoost', 'Prophet', 'Streamlit', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/crypto-ml-dashboard',
@@ -136,6 +142,7 @@ export const data = {
       type: 'Real-Time Streaming',
       category: 'Data Engineering',
       name: 'Kafka Crypto Streaming',
+      highlight: '8 streams/sec · 650+ events/session',
       desc: 'Producer/consumer pipeline processing 8 concurrent crypto price streams per second. 650+ events per session persisted to PostgreSQL with Kafka UI monitoring.',
       tech: ['Apache Kafka', 'Docker', 'PostgreSQL', 'Python'],
       url: 'https://github.com/yustin-prz/kafka-crypto-streaming',
@@ -145,6 +152,7 @@ export const data = {
       type: 'Data Warehouse',
       category: 'Data Engineering',
       name: 'dbt + DuckDB Warehouse',
+      highlight: '11/11 data-quality tests · 38,865 rows',
       desc: 'Staging + marts architecture across 23 source tables (38,865 rows). 4 transformation models, 11 automated data quality tests (all passing). Full lineage documentation.',
       tech: ['dbt', 'DuckDB', 'SQL', 'Python'],
       url: 'https://github.com/yustin-prz/dbt-crypto-warehouse',
@@ -154,6 +162,7 @@ export const data = {
       type: 'ETL Orchestration',
       category: 'Data Engineering',
       name: 'Airflow ETL Pipeline',
+      highlight: 'Daily DAG · retry + validation',
       desc: 'Daily DAG with extract, transform, load and validate tasks. Retry logic and data integrity checks on every run. Production-grade pipeline deployed on Docker.',
       tech: ['Airflow', 'Docker', 'Python', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/etl-crypto-airflow',
@@ -163,6 +172,7 @@ export const data = {
       type: 'REST API · Backend',
       category: 'Backend',
       name: 'Order Management API',
+      highlight: 'Full CRUD · layered API',
       desc: 'RESTful API for order management built with Node.js, Express and PostgreSQL. Full CRUD with layered architecture: routes, controllers, models and middleware validation.',
       tech: ['Node.js', 'Express', 'PostgreSQL', 'JavaScript'],
       url: 'https://github.com/yustin-prz/CRUD-JS-POSTAMAN-POSTGRESQL',
@@ -172,6 +182,7 @@ export const data = {
       type: 'Desktop App · C#',
       category: 'Backend',
       name: 'RoadReady — Vehicle Inspection',
+      highlight: 'Layered + Factory pattern',
       desc: 'Vehicle inspection management system in C# (Windows Forms) with layered architecture, Factory Pattern, ADO.NET data access and RDLC report generation.',
       tech: ['C#', 'SQL Server', 'ADO.NET', 'Windows Forms'],
       url: 'https://github.com/yustin-prz/ProyectoRoadReady_YustinPerezCastro208390544',
@@ -181,6 +192,7 @@ export const data = {
       type: 'SQL Analysis',
       category: 'BI & Analytics',
       name: 'Gold vs Economic Factors',
+      highlight: '8 business questions · 4,137 rows',
       desc: '8 business questions answered on 4,137-row financial dataset using advanced SQL: CTEs, LAG(), CORR(), FILTER WHERE and UNION ALL on PostgreSQL.',
       tech: ['PostgreSQL', 'SQL', 'SQLAlchemy', 'Python'],
       url: 'https://github.com/yustin-prz/gold-sql-analysis',
@@ -190,6 +202,7 @@ export const data = {
       type: 'Power BI · Analytics',
       category: 'BI & Analytics',
       name: 'US GDP vs Public Debt',
+      highlight: '7 features · 3-page dashboard',
       desc: 'Cleaned 295-row time series (1947–2020), resolved unit inconsistency, engineered 7 features. 3-page Power BI executive dashboard with KPI cards and trend analysis.',
       tech: ['Python', 'Pandas', 'Power BI', 'DAX'],
       url: 'https://github.com/yustin-prz/us-gdp-debt-analysis',
@@ -199,6 +212,7 @@ export const data = {
       type: 'Power BI · Dashboard',
       category: 'BI & Analytics',
       name: 'Teen Mental Health',
+      highlight: '1,200 records · wellbeing index',
       desc: 'Engineered composite wellbeing index and risk segmentation for 1,200 records. 4-page interactive Power BI dashboard with slicers and conditional formatting.',
       tech: ['Python', 'Power BI', 'DAX', 'Pandas'],
       url: 'https://github.com/yustin-prz/teen-mental-health-analysis',
@@ -208,6 +222,7 @@ export const data = {
       type: 'Web Scraping · Analysis',
       category: 'Data Engineering',
       name: 'CR Job Market Analysis',
+      highlight: 'Multi-source scraping pipeline',
       desc: 'Multi-source data collection pipeline using Selenium and JSearch API. Analyzes most demanded skills and top hiring companies in Costa Rica\'s data job market.',
       tech: ['Selenium', 'Python', 'JSearch API', 'Pandas'],
       url: 'https://github.com/yustin-prz/cr-jobs-market-analysis',

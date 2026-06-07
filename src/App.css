@@ -146,6 +146,7 @@
 .proj-emoji { font-size: 26px; margin-bottom: 6px; }
 .proj-type { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--font-mono); }
 .proj-name { font-size: 16px; font-weight: 600; color: #ddd; }
+.proj-highlight { align-self: flex-start; display: inline-flex; align-items: center; font-size: 11px; font-family: var(--font-mono); color: var(--accent); background: var(--accent-dim); border: 0.5px solid var(--accent-border); border-radius: 5px; padding: 3px 8px; margin: 2px 0; }
 .proj-desc { font-size: 13px; color: #666; line-height: 1.65; flex: 1; }
 .proj-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
 .proj-pills { display: flex; gap: 5px; flex-wrap: wrap; }
@@ -294,6 +295,7 @@
 .recruiter-btn:hover { border-color: var(--accent); color: var(--accent); }
 .recruiter-btn--primary { background: var(--accent); color: #03101f; border-color: var(--accent); font-weight: 600; }
 .recruiter-btn--primary:hover { color: #03101f; opacity: 0.9; }
+.recruiter-btn--cv { display: block; width: 100%; margin-top: 8px; }
 
 @media (max-width: 480px) {
   .recruiter-panel { left: 16px; right: 16px; bottom: 16px; width: auto; }
