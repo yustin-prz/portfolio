@@ -203,6 +203,7 @@ export default function App() {
           </div>
           <div className="hero-btns">
             <a href="#projects" className="btn-primary">View projects</a>
+            {data.resumeUrl && <a href={data.resumeUrl} target="_blank" rel="noreferrer" download className="btn-secondary">Download CV ↓</a>}
             <a href={data.github} target="_blank" rel="noreferrer" className="btn-secondary">github.com/yustin-prz ↗</a>
           </div>
         </div>
@@ -327,6 +328,7 @@ export default function App() {
                   {p.inProgress && <span className="proj-wip"> · In progress</span>}
                 </div>
                 <div className="proj-name">{p.name}</div>
+                {p.highlight && <div className="proj-highlight">{p.highlight}</div>}
                 <div className="proj-desc">{p.desc}</div>
                 <div className="proj-footer">
                   <div className="proj-pills">
@@ -436,6 +438,9 @@ export default function App() {
             <a href={data.linkedin} target="_blank" rel="noreferrer" className="recruiter-btn">LinkedIn</a>
             <a href={data.github} target="_blank" rel="noreferrer" className="recruiter-btn">GitHub</a>
           </div>
+          {data.resumeUrl && (
+            <a href={data.resumeUrl} target="_blank" rel="noreferrer" download className="recruiter-btn recruiter-btn--cv">Download CV ↓</a>
+          )}
         </div>
       )}
     </div>
