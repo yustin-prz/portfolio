@@ -4,7 +4,7 @@ export const data = {
   subtitle: 'Building end-to-end data solutions · Python · SQL · Power BI · dbt · Kafka',
   // Rotating phrases for the hero typewriter effect
   heroRoles: [
-    'Data Engineering Intern @ DHL',
+    'SSC Web Scraping & Data Engineering Intern @ Equifax',
     'ETL · dbt · Kafka · Airflow',
     '100k+ Records Per Dataset',
   ],
@@ -30,7 +30,7 @@ export const data = {
       [{ c: '', t: '             ' }, { c: 'op', t: '>>' }, { c: '', t: ' validate' }],
     ],
   },
-  bio: 'Software Engineering student who turns raw data into production pipelines and decisions. I build data solutions over datasets of 100,000+ records for DHL\'s Accounts Receivable team, where I re-engineered a critical pipeline and cut its execution time by 75% — a solution now scaling across 8 South American countries. I ship end-to-end data systems — orchestrated with Airflow, streamed with Kafka, modeled with dbt — backed by 11 open-source projects.',
+  bio: 'Software Engineering student who turns raw data into production pipelines and decisions. Currently a Web Scraping & Data Engineering Intern at Equifax\'s Shared Service Center. Previously built data solutions over datasets of 100,000+ records for DHL\'s Accounts Receivable team, where I re-engineered a critical pipeline and cut its execution time by 75% — a solution now scaling across 8 South American countries. I ship end-to-end data systems — orchestrated with Airflow, streamed with Kafka, modeled with dbt — backed by 11 open-source projects.',
   email: 'perezcastroyus23@gmail.com',
   linkedin: 'https://linkedin.com/in/yustin-prz',
   github: 'https://github.com/yustin-prz',
@@ -39,7 +39,7 @@ export const data = {
   location: 'Alajuela, Costa Rica',
   // About cards (kept here so no content is hardcoded in components)
   about: [
-    { icon: '🏢', title: 'Current role', text: 'Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia. I build data pipelines and automation for the Accounts Receivable team across Latin America.' },
+    { icon: '🏢', title: 'Current role', text: 'SSC Web Scraping & Data Engineering Intern at Equifax Shared Service Center. Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
     { icon: '🎓', title: 'Education', text: "Bachelor's Degree in Software Engineering at Universidad Técnica Nacional (2025 – Present). Associate's Degree in Information Technologies, 2025." },
     { icon: '📍', title: 'Location', text: 'Alajuela, Costa Rica. Open to remote roles worldwide and hybrid positions in the Greater Metropolitan Area.' },
     { icon: '🗣️', title: 'Languages', text: 'Spanish (native) · English C1 Advanced (EF SET Certified). All documentation and portfolio content in English.' },
@@ -84,11 +84,22 @@ export const data = {
   ],
   experience: [
     {
-      company: 'DHL Shared Service Center Americas',
-      role: 'Data Engineering Intern · RPA & Innovation Team',
-      location: 'Heredia, Costa Rica',
-      date: '2025 – Present',
+      company: 'Equifax Costa Rica',
+      role: 'SSC Web Scraping & Data Engineering Intern',
+      location: 'San José, Costa Rica',
+      date: 'Jul 2026 – Present',
       active: true,
+      tech: ['Python', 'Selenium', 'SQL', 'Web Scraping'],
+      bullets: [
+        'Joined the Web Scraping team, building data collection and extraction pipelines as part of Equifax\'s Shared Service Center.',
+      ],
+    },
+    {
+      company: 'DHL Express',
+      role: 'SSC Data Engineering Intern · RPA & Innovation Team',
+      location: 'Belén, Heredia, Costa Rica',
+      date: 'Oct 2025 – Jul 2026',
+      active: false,
       tech: ['Python', 'SQL', 'Power Query', 'Power BI', 'Selenium', 'Power Apps', 'Excel VBA'],
       bullets: [
         'Developed analytical solutions for the Accounts Receivable team over datasets of 100,000+ records, automating reconciliation, collections tracking and financial reporting workflows.',
@@ -102,12 +113,13 @@ export const data = {
     {
       company: 'Freelance',
       role: 'Web Developer',
-      location: 'Remote',
-      date: 'May 2023 – May 2024',
+      location: 'Costa Rica · Remote',
+      date: 'May 2023 – Apr 2024',
       active: false,
-      tech: ['JavaScript', 'MySQL', 'HTML/CSS'],
+      tech: ['Angular', 'JavaScript', 'SQL Server', 'HTML/CSS'],
       bullets: [
-        'Designed relational MySQL databases and built data visualization components, enabling clients to track business performance through custom analytical dashboards.',
+        'Designed relational SQL Server databases and built data visualization components, enabling clients to track business performance through custom analytical dashboards.',
+        'Built REST APIs to automate data exchange between external services and internal systems across multiple formats.',
         'Translated client requirements into end-to-end solutions, managing the full project lifecycle from requirements gathering through delivery and documentation.',
       ],
     },
