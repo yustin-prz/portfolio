@@ -39,7 +39,7 @@ export const data = {
   location: 'Alajuela, Costa Rica',
   // About cards (kept here so no content is hardcoded in components)
   about: [
-    { icon: '🏢', title: 'Current role', text: 'SSC Web Scraping & Data Engineering Intern at Equifax Global Business Services (GBS). Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
+    { icon: '🏢', title: 'Current role', text: 'GBS Web Scraping & Data Engineering Intern at Equifax Global Business Services (GBS). Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
     { icon: '🎓', title: 'Education', text: "Bachelor's Degree in Software Engineering at Universidad Técnica Nacional (2025 – Present). Associate's Degree in Information Technologies, 2025." },
     { icon: '📍', title: 'Location', text: 'Alajuela, Costa Rica. Open to remote roles worldwide and hybrid positions in the Greater Metropolitan Area.' },
     { icon: '🗣️', title: 'Languages', text: 'Spanish (native) · English C1 Advanced (EF SET Certified). All documentation and portfolio content in English.' },
