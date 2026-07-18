@@ -4,7 +4,7 @@ export const data = {
   subtitle: 'Building end-to-end data solutions · Python · SQL · Power BI · dbt · Kafka',
   // Rotating phrases for the hero typewriter effect
   heroRoles: [
-    'SSC Web Scraping & Data Engineering Intern @ Equifax',
+    'GBS Web Scraping & Data Engineering Intern @ Equifax',
     'ETL · dbt · Kafka · Airflow',
     '100k+ Records Per Dataset',
   ],
