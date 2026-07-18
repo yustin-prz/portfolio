@@ -30,7 +30,7 @@ export const data = {
       [{ c: '', t: '             ' }, { c: 'op', t: '>>' }, { c: '', t: ' validate' }],
     ],
   },
-  bio: 'Software Engineering student who turns raw data into production pipelines and decisions. Currently a Web Scraping & Data Engineering Intern at Equifax\'s Shared Service Center. Previously built data solutions over datasets of 100,000+ records for DHL\'s Accounts Receivable team, where I re-engineered a critical pipeline and cut its execution time by 75% — a solution now scaling across 8 South American countries. I ship end-to-end data systems — orchestrated with Airflow, streamed with Kafka, modeled with dbt — backed by 11 open-source projects.',
+  bio: 'Software Engineering student who turns raw data into production pipelines and decisions. Currently a Web Scraping & Data Engineering Intern at Equifax\'s Global Business Services (GBS). Previously built data solutions over datasets of 100,000+ records for DHL\'s Accounts Receivable team, where I re-engineered a critical pipeline and cut its execution time by 75% — a solution now scaling across 8 South American countries. I ship end-to-end data systems — orchestrated with Airflow, streamed with Kafka, modeled with dbt — backed by 11 open-source projects.',
   email: 'perezcastroyus23@gmail.com',
   linkedin: 'https://linkedin.com/in/yustin-prz',
   github: 'https://github.com/yustin-prz',
@@ -39,7 +39,7 @@ export const data = {
   location: 'Alajuela, Costa Rica',
   // About cards (kept here so no content is hardcoded in components)
   about: [
-    { icon: '🏢', title: 'Current role', text: 'SSC Web Scraping & Data Engineering Intern at Equifax Shared Service Center. Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
+    { icon: '🏢', title: 'Current role', text: 'SSC Web Scraping & Data Engineering Intern at Equifax Global Business Services (GBS). Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
     { icon: '🎓', title: 'Education', text: "Bachelor's Degree in Software Engineering at Universidad Técnica Nacional (2025 – Present). Associate's Degree in Information Technologies, 2025." },
     { icon: '📍', title: 'Location', text: 'Alajuela, Costa Rica. Open to remote roles worldwide and hybrid positions in the Greater Metropolitan Area.' },
     { icon: '🗣️', title: 'Languages', text: 'Spanish (native) · English C1 Advanced (EF SET Certified). All documentation and portfolio content in English.' },
@@ -85,7 +85,7 @@ export const data = {
   experience: [
     {
       company: 'Equifax Costa Rica',
-      role: 'SSC Web Scraping & Data Engineering Intern',
+      role: 'GBS Web Scraping & Data Engineering Intern',
       location: 'San José, Costa Rica',
       date: 'Jul 2026 – Present',
       active: true,
