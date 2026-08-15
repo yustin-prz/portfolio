@@ -89,9 +89,12 @@ export const data = {
       location: 'San José, Costa Rica',
       date: 'Jul 2026 – Present',
       active: true,
-      tech: ['Python', 'Selenium', 'SQL', 'Web Scraping'],
+      tech: ['Python', 'Docker', 'Kubernetes', 'AWS', 'Jenkins', 'Playwright', 'CI/CD'],
       bullets: [
-        'Joined the Web Scraping team, building data collection and extraction pipelines as part of Equifax\'s Shared Service Center.',
+        'Supporting deployments of Web Scraping services through CI/CD tooling (Jenkins, GitHub) within a Docker/Kubernetes/AWS environment.',
+        'Maintaining existing data-extraction scripts against upstream changes — source site structure updates, credential rotation and dependency upgrades.',
+        'Organizing and documenting code repositories for the Web Scraping team, improving version control practices and knowledge transfer.',
+        'Supporting data-quality efforts — cleaning, normalization and consistency validation — on extracted data feeding Equifax\'s credit-information products.',
       ],
     },
     {
