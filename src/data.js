@@ -91,10 +91,10 @@ export const data = {
       active: true,
       tech: ['Python', 'Docker', 'Kubernetes', 'AWS', 'Jenkins', 'Playwright', 'CI/CD'],
       bullets: [
-        'Supporting deployments of Web Scraping services through CI/CD tooling (Jenkins, GitHub) within a Docker/Kubernetes/AWS environment.',
-        'Maintaining existing data-extraction scripts against upstream changes — source site structure updates, credential rotation and dependency upgrades.',
-        'Organizing and documenting code repositories for the Web Scraping team, improving version control practices and knowledge transfer.',
-        'Supporting data-quality efforts — cleaning, normalization and consistency validation — on extracted data feeding Equifax\'s credit-information products.',
+        'Run CI/CD pipelines (Jenkins, GitHub) across a Docker/Kubernetes/AWS stack that keep Equifax\'s Web Scraping data-collection services deploying reliably to production.',
+        'Keep mission-critical data-extraction pipelines resilient against constantly shifting external sources — resolving site-structure changes, credential rotations and dependency drift before they break downstream reporting.',
+        'Raised code-repository standards for the Web Scraping team, tightening version control practices and speeding up knowledge transfer across the team.',
+        'Protect the integrity of data feeding Equifax\'s global credit-information products — trusted by financial institutions worldwide — through systematic cleaning, normalization and validation.',
       ],
     },
     {
