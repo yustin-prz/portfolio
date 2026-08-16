@@ -4,7 +4,7 @@ export const data = {
   subtitle: 'Building end-to-end data solutions · Python · SQL · Power BI · dbt · Kafka',
   // Rotating phrases for the hero typewriter effect
   heroRoles: [
-    'SSC Web Scraping & Data Engineering Intern @ Equifax',
+    'GBS Web Scraping & Data Engineering Intern @ Equifax',
     'ETL · dbt · Kafka · Airflow',
     '100k+ Records Per Dataset',
   ],
@@ -39,7 +39,7 @@ export const data = {
   location: 'Alajuela, Costa Rica',
   // About cards (kept here so no content is hardcoded in components)
   about: [
-    { icon: '🏢', title: 'Current role', text: 'GBS Web Scraping & Data Engineering Intern at Equifax Global Business Services (GBS). Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
+    { icon: '🏢', title: 'Current role', text: 'Web Scraping & Data Engineering Intern at Equifax Global Business Services (GBS). Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
     { icon: '🎓', title: 'Education', text: "Bachelor's Degree in Software Engineering at Universidad Técnica Nacional (2025 – Present). Associate's Degree in Information Technologies, 2025." },
     { icon: '📍', title: 'Location', text: 'Alajuela, Costa Rica. Open to remote roles worldwide and hybrid positions in the Greater Metropolitan Area.' },
     { icon: '🗣️', title: 'Languages', text: 'Spanish (native) · English C1 Advanced (EF SET Certified). All documentation and portfolio content in English.' },
@@ -85,7 +85,7 @@ export const data = {
   experience: [
     {
       company: 'Equifax Costa Rica',
-      role: 'GBS Web Scraping & Data Engineering Intern',
+      role: 'Web Scraping & Data Engineering Intern',
       location: 'San José, Costa Rica',
       date: 'Jul 2026 – Present',
       active: true,
