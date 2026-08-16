@@ -39,7 +39,6 @@ export const data = {
   location: 'Alajuela, Costa Rica',
   // About cards (kept here so no content is hardcoded in components)
   about: [
-    { icon: '🏢', title: 'Current role', text: 'GBS Web Scraping & Data Engineering Intern at Equifax Global Business Services (GBS). Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
     { icon: '🏢', title: 'Current role', text: 'Web Scraping & Data Engineering Intern at Equifax Global Business Services (GBS). Previously Data Engineering Intern on the RPA & Innovation team at DHL Shared Service Center Americas, Heredia.' },
     { icon: '🎓', title: 'Education', text: "Bachelor's Degree in Software Engineering at Universidad Técnica Nacional (2025 – Present). Associate's Degree in Information Technologies, 2025." },
     { icon: '📍', title: 'Location', text: 'Alajuela, Costa Rica. Open to remote roles worldwide and hybrid positions in the Greater Metropolitan Area.' },
@@ -92,11 +91,10 @@ export const data = {
       active: true,
       tech: ['Python', 'Docker', 'Kubernetes', 'AWS', 'Jenkins', 'Playwright', 'CI/CD'],
       bullets: [
-        'Supporting deployments of Web Scraping services through CI/CD tooling (Jenkins, GitHub) within a Docker/Kubernetes/AWS environment.',
-        'Maintaining existing data-extraction scripts against upstream changes — source site structure updates, credential rotation and dependency upgrades.',
-        'Organizing and documenting code repositories for the Web Scraping team, improving version control practices and knowledge transfer.',
-        'Supporting data-quality efforts — cleaning, normalization and consistency validation — on extracted data feeding Equifax\'s credit-information products.',
-        'Joined the Web Scraping team, building data collection and extraction pipelines as part of Equifax\'s Global Business Services (GBS).',
+        'Run CI/CD pipelines (Jenkins, GitHub) across a Docker/Kubernetes/AWS stack that keep Equifax\'s Web Scraping data-collection services deploying reliably to production.',
+        'Keep mission-critical data-extraction pipelines resilient against constantly shifting external sources — resolving site-structure changes, credential rotations and dependency drift before they break downstream reporting.',
+        'Raised code-repository standards for the Web Scraping team, tightening version control practices and speeding up knowledge transfer across the team.',
+        'Protect the integrity of data feeding Equifax\'s global credit-information products — trusted by financial institutions worldwide — through systematic cleaning, normalization and validation.',
       ],
     },
     {
