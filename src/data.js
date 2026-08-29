@@ -150,6 +150,7 @@ export const data = {
       desc: 'Educational ML platform with Prophet + XGBoost, interactive lessons, backtesting simulator and 10-question quiz. 4-page Streamlit web app with real-time data.',
       tech: ['Python', 'XGBoost', 'Prophet', 'Streamlit', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/crypto-ml-dashboard',
+      demoUrl: 'https://crypto-ml-dashboard-hgkewdmkqni8dyuidsahmk.streamlit.app/',
     },
     {
       emoji: '⚡',

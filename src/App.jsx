@@ -340,7 +340,7 @@ export default function App() {
                         className="proj-demo-link"
                         onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(p.demoUrl, '_blank', 'noopener,noreferrer'); }}
                       >
-                        Live docs
+                        Live demo
                       </span>
                     )}
                     <span className="proj-link">→</span>
