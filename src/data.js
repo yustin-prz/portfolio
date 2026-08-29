@@ -170,6 +170,7 @@ export const data = {
       desc: 'Staging + marts architecture across 23 source tables (38,865 rows). 4 transformation models, 11 automated data quality tests (all passing). Full lineage documentation.',
       tech: ['dbt', 'DuckDB', 'SQL', 'Python'],
       url: 'https://github.com/yustin-prz/dbt-crypto-warehouse',
+      demoUrl: 'https://yustin-prz.github.io/dbt-crypto-warehouse/',
     },
     {
       emoji: '🔄',

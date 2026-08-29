@@ -334,7 +334,17 @@ export default function App() {
                   <div className="proj-pills">
                     {p.tech.slice(0, 3).map(t => <span key={t} className="proj-pill">{t}</span>)}
                   </div>
-                  <span className="proj-link">→</span>
+                  <div className="proj-actions">
+                    {p.demoUrl && (
+                      <span
+                        className="proj-demo-link"
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(p.demoUrl, '_blank', 'noopener,noreferrer'); }}
+                      >
+                        Live docs
+                      </span>
+                    )}
+                    <span className="proj-link">→</span>
+                  </div>
                 </div>
               </a>
             ))}
