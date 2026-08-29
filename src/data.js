@@ -48,7 +48,7 @@ export const data = {
   stats: [
     { value: 11, suffix: '', label: 'Projects published' },
     { value: 100, suffix: 'k+', label: 'Records per dataset' },
-    { value: 6, suffix: '', label: 'Certifications' },
+    { value: 7, suffix: '', label: 'Certifications' },
   ],
   // Impact section — animated metric cards (between About and Experience)
   impact: [
@@ -262,7 +262,7 @@ export const data = {
     { name: 'Power BI Dual Certification', issuer: 'Udemy', date: 'January 2025', icon: '📈', link: 'https://ude.my/UC-d7521e99-219d-45fe-ae30-b7cf896089eb' },
     { name: 'Introduction to Data Science', issuer: 'Cisco Networking Academy', date: 'May 2026', icon: '🔬', link: 'https://www.credly.com/badges/0c81c19e-86bb-49e0-9d39-691e04f1ee8f' },
     { name: 'EF SET Certificate — C1 Advanced', issuer: 'EF Education First', date: 'June 2026', icon: '🗣️', link: 'https://cert.efset.org/YSh6id' },
-    { name: 'Google Cloud Computing Foundations', issuer: 'Google Cloud Career Launchpad LATAM', date: 'In progress', icon: '☁️' },
+    { name: 'Google Cloud Computing Foundations Certificate', issuer: 'Google Cloud', date: 'August 2026', icon: '☁️', link: 'https://www.credly.com/badges/aca8373d-6328-49b2-b8a2-570b4390ab17' },
   ],
   // Data behind the "Recruiter view" floating summary panel
   recruiterSummary: {
