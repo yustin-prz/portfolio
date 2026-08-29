@@ -136,10 +136,9 @@ export const data = {
       category: 'Backend',
       name: 'SnackFlow',
       highlight: 'Dockerized 3-tier app',
-      desc: 'Full stack food ordering application currently in active development. Frontend, backend and database layers with Docker containerization.',
+      desc: 'Full stack food ordering application. Frontend, backend and database layers with Docker containerization.',
       tech: ['JavaScript', 'Node.js', 'Docker', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/snackflow',
-      inProgress: true,
     },
     {
       emoji: '🤖',
