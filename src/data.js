@@ -252,9 +252,9 @@ export const data = {
     { category: 'BI & Visualization', items: ['Power BI (DAX)', 'Data modeling', 'Power Query', 'Plotly', 'Matplotlib'] },
     { category: 'Backend & APIs', items: ['Node.js', 'Express', 'REST APIs', 'Postman'] },
     { category: 'Automation', items: ['Selenium', 'Excel VBA', 'Power Apps', 'Python scripting'] },
-    { category: 'Cloud & DevOps', items: ['Google Cloud (in training)', 'Docker', 'Git', 'GitHub'] },
+    { category: 'Cloud & DevOps', items: ['AWS', 'Google Cloud Platform (GCP)', 'Kubernetes', 'Jenkins', 'CI/CD', 'Git', 'GitHub'] },
   ],
-  // 6 verified certs (with credential links) + Google Cloud shown as "In progress"
+  // 7 verified certs, all with credential links
   certifications: [
     { name: 'Data Analytics Essentials', issuer: 'Cisco Networking Academy', date: 'May 2026', icon: '📊', link: 'https://www.credly.com/badges/239d5ec2-98dd-4492-9acb-3cf0f5104f56' },
     { name: 'Python Essentials 2', issuer: 'Cisco Networking Academy / Python Institute', date: 'Feb 2026', icon: '🐍', link: 'https://www.credly.com/badges/60151291-fd02-401c-8d61-2a6e97c99e9f' },
