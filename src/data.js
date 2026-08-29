@@ -140,6 +140,11 @@ export const data = {
       tech: ['JavaScript', 'Node.js', 'Docker', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/snackflow',
       inProgress: true,
+      caseStudy: {
+        problem: 'A real client (La Matamonchis S.A., a snack vendor at mass events) needed a POS that keeps taking sales when venue WiFi drops — losing connectivity mid-sale at an outdoor event can\'t mean losing the sale.',
+        approach: 'Built the checkout flow (catalog → cart → payment) with live failover: the backend tries a cloud Postgres instance (Neon) first and falls back to a local Postgres instance automatically if the connection drops — not just at startup, but mid-session — then reconciles any sales made while offline once connectivity returns. Layered JWT + mandatory TOTP 2FA authentication, rate limiting and Helmet on top, validated cash payments against real Costa Rican colón denominations, and made manual discounts and the 2x1 promo mutually exclusive and auto-recalculating on every cart change. Documented every endpoint with Swagger/OpenAPI and covered the backend with Jest + Supertest, as team lead across 3 developers on a university software-quality course.',
+        results: 'All 8 user stories shipped and verified end-to-end (secure login, sale flow, discounts, promotions, reports, user management), running fully containerized via Docker Compose with an interactive Swagger docs page for every endpoint.',
+      },
     },
     {
       emoji: '🤖',
@@ -212,6 +217,11 @@ export const data = {
       desc: 'RESTful API for order management built with Node.js, Express and PostgreSQL. Full CRUD with layered architecture: routes, controllers, models and middleware validation.',
       tech: ['Node.js', 'Express', 'PostgreSQL', 'JavaScript'],
       url: 'https://github.com/yustin-prz/CRUD-JS-POSTAMAN-POSTGRESQL',
+      caseStudy: {
+        problem: 'An order and its line items have to stay consistent even when a write fails partway through — a naive multi-insert CRUD API can leave an order persisted with only half its items if one insert fails.',
+        approach: 'Built a layered Express API (routes → controllers → model → PostgreSQL) where every create and update wraps the order and all of its items in a single SQL transaction (BEGIN / COMMIT / ROLLBACK), so a failure on any item insert rolls back the entire order instead of leaving partial data. A dedicated validation middleware checks types and business rules — required fields, positive quantities and prices, valid dates — before any query runs, returning structured 400 responses with a full list of errors instead of failing on the first one. Reads use a single query with json_agg/json_build_object to return each order pre-nested with its items, avoiding an N+1 query per order.',
+        results: 'Full CRUD (create, list, find, update, delete) verified end-to-end via Postman against real PostgreSQL transactions, with the transactional insert model guaranteeing an order is never persisted without its items — even under a failed write.',
+      },
     },
     {
       emoji: '🚗',
@@ -222,6 +232,11 @@ export const data = {
       desc: 'Vehicle inspection management system in C# (Windows Forms) with layered architecture, Factory Pattern, ADO.NET data access and RDLC report generation.',
       tech: ['C#', 'SQL Server', 'ADO.NET', 'Windows Forms'],
       url: 'https://github.com/yustin-prz/ProyectoRoadReady_YustinPerezCastro208390544',
+      caseStudy: {
+        problem: 'A vehicle-inspection office\'s appointment, invoicing and employee management needed a desktop system where business logic wouldn\'t be hardwired to one specific database connection or data-access implementation.',
+        approach: 'Structured the app in classic layers — Windows Forms UI → BLL → DAL → Entities — with IBLL/IDAL interfaces so the business layer depends on abstractions instead of concrete data-access classes. Added a Factory Pattern (FactoryConexion / FactoryDatabase) that decides at runtime which DAL implementation and DB connection to instantiate, decoupling the rest of the app from a hardcoded ADO.NET setup. Integrated a live connected service to Costa Rica\'s Central Bank (BCCR) for currency exchange rates used in invoicing, and generated printable inspection and invoice documents with RDLC reports.',
+        results: 'A working modular system covering appointments, invoicing, vehicles, employees and role-based security, with BCCR-driven currency conversion wired into invoicing and the DAL swappable through the Factory layer without touching BLL or UI code.',
+      },
     },
     {
       emoji: '📊',
@@ -232,6 +247,11 @@ export const data = {
       desc: '8 business questions answered on 4,137-row financial dataset using advanced SQL: CTEs, LAG(), CORR(), FILTER WHERE and UNION ALL on PostgreSQL.',
       tech: ['PostgreSQL', 'SQL', 'SQLAlchemy', 'Python'],
       url: 'https://github.com/yustin-prz/gold-sql-analysis',
+      caseStudy: {
+        problem: 'Gold is widely assumed to be a "safe haven" asset — rising when the dollar weakens or inflation spikes — but that\'s a narrative, not a verified fact. Needed to test it against 11 years of real data instead of assuming it.',
+        approach: 'Loaded 4,137 rows of daily gold price (XAU/USD), US Dollar Index, crude oil and CPI inflation data (2015–2026) into PostgreSQL and answered 8 business questions using pure SQL — no pandas-side computation. Used CTEs with LAG() for year-over-year growth, CORR() to statistically quantify the relationship between gold and each economic factor, FILTER (WHERE ...) for conditional counts (years gold crossed $2K/$3K/$4K), and UNION ALL to combine top-10 and bottom-10 price-day rankings in one query.',
+        results: 'Confirmed gold more than tripled (~$1,200 → $4,000+) between 2015 and 2026, quantified a negative correlation between gold and the Dollar Index in most years via CORR(), and showed gold priced measurably higher during high-inflation (>6%) periods — validating the safe-haven hypothesis with data instead of assuming it.',
+      },
     },
     {
       emoji: '📈',
@@ -242,6 +262,11 @@ export const data = {
       desc: 'Cleaned 295-row time series (1947–2020), resolved unit inconsistency, engineered 7 features. 3-page Power BI executive dashboard with KPI cards and trend analysis.',
       tech: ['Python', 'Pandas', 'Power BI', 'DAX'],
       url: 'https://github.com/yustin-prz/us-gdp-debt-analysis',
+      caseStudy: {
+        problem: 'The raw FRED/Treasury dataset had 26.1% nulls in the public-debt column, GDP and debt expressed in different units despite both headers claiming "$mil", dates stored as strings, and a redundant index column — unusable for time-series analysis as-is.',
+        approach: 'Ran a full data-quality diagnosis (nulls, dtypes, duplicates, temporal coverage) before touching anything, then built a reusable Python cleaning pipeline that standardized units, converted dates to proper datetime64, and made an explicit, documented decision not to impute the 77 historical nulls — quarterly debt wasn\'t systematically reported before 1966, so imputing would have fabricated data in a historically significant period. Engineered 7 derived columns (a recession flag from 2 consecutive negative-growth quarters, debt-to-GDP ratio, decade bucket, YoY growth), validated the output with a 10-check automated suite, then built a 3-page Power BI dashboard on top of the cleaned data.',
+        results: 'Identified 2020 Q2 as the sharpest quarterly GDP drop in the entire series (-9.47%, nearly 3x the worst 2008 quarter) and showed the debt-to-GDP ratio climbing from ~40% in 1966 to 135.6% in 2020 — crossing 100% for the first time in 2013 and never returning to pre-crisis levels after any recession since 1980.',
+      },
     },
     {
       emoji: '🧠',
@@ -252,6 +277,11 @@ export const data = {
       desc: 'Engineered composite wellbeing index and risk segmentation for 1,200 records. 4-page interactive Power BI dashboard with slicers and conditional formatting.',
       tech: ['Python', 'Power BI', 'DAX', 'Pandas'],
       url: 'https://github.com/yustin-prz/teen-mental-health-analysis',
+      caseStudy: {
+        problem: 'A raw 1,200-record survey of teen social-media habits and mental-health scores (stress, anxiety, addiction — each 1-10) doesn\'t tell a stakeholder anything actionable on its own. Needed to turn scattered scores into a clear view of who is at risk and what\'s driving it.',
+        approach: 'Engineered 7 derived features on top of the original 13 — a composite 0-100 wellbeing index, a risk score and risk level from averaged stress + anxiety + addiction, and segments for sleep quality and social-media usage intensity — then built a 4-page interactive Power BI dashboard (overview, social media vs. mental health, sleep vs. academics, risk profile) with cross-filtering slicers by platform, gender and age group and conditional formatting to surface high-risk segments visually.',
+        results: 'Segmented 23.7% of respondents into the high-risk bucket (wellbeing index 34.9/100, stress and anxiety near 8/10), found teens using both Instagram and TikTok reported the highest stress and anxiety of any platform group, and quantified that more screen time before sleep correlates with lower GPA — turning a flat survey dataset into an actionable risk-segmentation view.',
+      },
     },
     {
       emoji: '🔍',
