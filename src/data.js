@@ -132,7 +132,7 @@ export const data = {
   projects: [
     {
       emoji: '🍽️',
-      type: 'Full Stack · In Progress',
+      type: 'Full Stack',
       category: 'Backend',
       name: 'SnackFlow',
       highlight: 'Dockerized 3-tier app',
