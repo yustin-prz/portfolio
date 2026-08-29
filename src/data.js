@@ -136,15 +136,9 @@ export const data = {
       category: 'Backend',
       name: 'SnackFlow',
       highlight: 'Dockerized 3-tier app',
-      desc: 'Full stack food ordering application currently in active development. Frontend, backend and database layers with Docker containerization.',
+      desc: 'Full stack food ordering application. Frontend, backend and database layers with Docker containerization.',
       tech: ['JavaScript', 'Node.js', 'Docker', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/snackflow',
-      inProgress: true,
-      caseStudy: {
-        problem: 'A real client (La Matamonchis S.A., a snack vendor at mass events) needed a POS that keeps taking sales when venue WiFi drops — losing connectivity mid-sale at an outdoor event can\'t mean losing the sale.',
-        approach: 'Built the checkout flow (catalog → cart → payment) with live failover: the backend tries a cloud Postgres instance (Neon) first and falls back to a local Postgres instance automatically if the connection drops — not just at startup, but mid-session — then reconciles any sales made while offline once connectivity returns. Layered JWT + mandatory TOTP 2FA authentication, rate limiting and Helmet on top, validated cash payments against real Costa Rican colón denominations, and made manual discounts and the 2x1 promo mutually exclusive and auto-recalculating on every cart change. Documented every endpoint with Swagger/OpenAPI and covered the backend with Jest + Supertest, as team lead across 3 developers on a university software-quality course.',
-        results: 'All 8 user stories shipped and verified end-to-end (secure login, sale flow, discounts, promotions, reports, user management), running fully containerized via Docker Compose with an interactive Swagger docs page for every endpoint.',
-      },
     },
     {
       emoji: '🤖',
