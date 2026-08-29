@@ -151,6 +151,11 @@ export const data = {
       tech: ['Python', 'XGBoost', 'Prophet', 'Streamlit', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/crypto-ml-dashboard',
       demoUrl: 'https://crypto-ml-dashboard-hgkewdmkqni8dyuidsahmk.streamlit.app/',
+      caseStudy: {
+        problem: 'Most educational crypto tools either dump raw price charts on users or make bold price predictions without explaining the reasoning behind them — neither approach actually teaches how professional technical indicators work.',
+        approach: 'Built an end-to-end pipeline: CoinGecko API → PostgreSQL (via SQLAlchemy) → engineered features (RSI, MACD, Bollinger Bands, moving averages, volume ratios) → a 4-page Streamlit app covering live market data, interactive indicator lessons, a strategy backtester and a quiz. Refactored the DB connection to read from environment variables / Streamlit secrets instead of a hardcoded local connection, so the same codebase runs identically in dev and production, then deployed it against a managed Postgres instance (Neon).',
+        results: 'Live production app serving 4 coins with real-time data, 3 backtested trading strategies benchmarked against a HODL baseline, and a fully reproducible deploy path (populate DB → set secrets → deploy) that anyone can fork and stand up themselves.',
+      },
     },
     {
       emoji: '⚡',
@@ -161,6 +166,11 @@ export const data = {
       desc: 'Producer/consumer pipeline processing 8 concurrent crypto price streams per second. 650+ events per session persisted to PostgreSQL with Kafka UI monitoring.',
       tech: ['Apache Kafka', 'Docker', 'PostgreSQL', 'Python'],
       url: 'https://github.com/yustin-prz/kafka-crypto-streaming',
+      caseStudy: {
+        problem: 'Needed to prove out a real-time streaming architecture — continuously ingesting price events and persisting them reliably — without depending on a paid real-time market-data feed for a portfolio project.',
+        approach: 'Built a producer/consumer pipeline around Apache Kafka. The producer simulates realistic price ticks for 8 coins using Gaussian random walks with per-coin volatility parameters (not naive random noise), publishing one event per coin per second to a crypto-prices topic. A consumer subscribes and persists every event to PostgreSQL in real time, logging throughput stats every 50 messages. Kafka UI runs alongside for live monitoring of topic and partition health, and the whole stack (Kafka, Zookeeper, Postgres) is containerized with Docker.',
+        results: 'Sustained 8 events/sec throughput and 650+ events persisted per session. The bullish/bearish split converges to ~54% over time — consistent with the no-drift random-walk model used, which is the correct, expected outcome for a simulated feed with no directional bias (a real check on whether the simulation is behaving as designed).',
+      },
     },
     {
       emoji: '🏗️',
@@ -172,6 +182,11 @@ export const data = {
       tech: ['dbt', 'DuckDB', 'SQL', 'Python'],
       url: 'https://github.com/yustin-prz/dbt-crypto-warehouse',
       demoUrl: 'https://yustin-prz.github.io/dbt-crypto-warehouse/',
+      caseStudy: {
+        problem: 'Raw historical price data for 23 cryptocurrencies existed only as 23 separate flat-file exports (2013–2021, ~38,865 rows combined) with no unified schema and no data-quality guarantees — the kind of fragmented-source problem real data teams hit when ingesting from multiple vendor exports.',
+        approach: 'Built a staging + marts architecture in dbt on top of DuckDB (embedded, no server to manage). A single stg_coins model unifies all 23 source files via UNION ALL and standardizes column names and types. Three mart models layer on top: daily prices enriched with return metrics and sentiment, a historical performance summary per coin, and market-cap dominance by year. 11 automated data-quality tests (not-null, uniqueness) run on every build via dbt test, and the entire pipeline — seed, run, test, docs generate — executes in CI on every push, publishing live documentation automatically.',
+        results: '11/11 tests passing on every CI run, 38,865 rows modeled across 4 tables, and full column-level lineage documentation published with zero manual steps to rebuild or redeploy the warehouse.',
+      },
     },
     {
       emoji: '🔄',
@@ -182,6 +197,11 @@ export const data = {
       desc: 'Daily DAG with extract, transform, load and validate tasks. Retry logic and data integrity checks on every run. Production-grade pipeline deployed on Docker.',
       tech: ['Airflow', 'Docker', 'Python', 'PostgreSQL'],
       url: 'https://github.com/yustin-prz/etl-crypto-airflow',
+      caseStudy: {
+        problem: 'Manually fetching cryptocurrency market data for historical analysis is error-prone and doesn\'t scale — the goal was a repeatable, unattended daily process that captures a consistent market snapshot instead of ad-hoc pulls.',
+        approach: 'Built a 4-stage Airflow DAG (extract → transform → load → validate) that pulls the top 100 coins from CoinGecko across 2 paginated requests, engineers 4 derived business metrics (market-cap tier, 24h performance, volume-to-cap ratio, snapshot date) and loads to PostgreSQL in append mode. Resilience is built in: a 2-retry policy with 5-minute delays plus explicit HTTP 429 rate-limit handling. Rather than fixing bad data after the fact, three validation gates run before a DAG run is marked successful — minimum row threshold, no nulls in the top-10 assets by market cap, and a Bitcoin-presence check.',
+        results: 'Daily runs consistently load ~100 new records, transforming raw API responses into an 18-column analytical table, with all 3 validation gates passing on every run — the DAG has never marked a run successful over incomplete or invalid data.',
+      },
     },
     {
       emoji: '📦',

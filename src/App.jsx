@@ -95,6 +95,7 @@ export default function App() {
   const [progress, setProgress] = useState(0);
   const [projectFilter, setProjectFilter] = useState('All');
   const [recruiterMode, setRecruiterMode] = useState(false);
+  const [caseStudyProject, setCaseStudyProject] = useState(null);
 
   const typed = useTypewriter(data.heroRoles);
 
@@ -335,6 +336,14 @@ export default function App() {
                     {p.tech.slice(0, 3).map(t => <span key={t} className="proj-pill">{t}</span>)}
                   </div>
                   <div className="proj-actions">
+                    {p.caseStudy && (
+                      <span
+                        className="proj-demo-link"
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setCaseStudyProject(p); }}
+                      >
+                        Case study
+                      </span>
+                    )}
                     {p.demoUrl && (
                       <span
                         className="proj-demo-link"
@@ -451,6 +460,39 @@ export default function App() {
           {data.resumeUrl && (
             <a href={data.resumeUrl} target="_blank" rel="noreferrer" download className="recruiter-btn recruiter-btn--cv">Download CV ↓</a>
           )}
+        </div>
+      )}
+
+      {/* CASE STUDY MODAL */}
+      {caseStudyProject && (
+        <div className="case-backdrop" onClick={() => setCaseStudyProject(null)}>
+          <div className="case-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="case-head">
+              <div>
+                <span className="case-emoji">{caseStudyProject.emoji}</span>
+                <span className="case-name">{caseStudyProject.name}</span>
+              </div>
+              <button className="case-close" onClick={() => setCaseStudyProject(null)} aria-label="Close">✕</button>
+            </div>
+            <div className="case-section">
+              <div className="case-label">Problem</div>
+              <div className="case-text">{caseStudyProject.caseStudy.problem}</div>
+            </div>
+            <div className="case-section">
+              <div className="case-label">Approach</div>
+              <div className="case-text">{caseStudyProject.caseStudy.approach}</div>
+            </div>
+            <div className="case-section">
+              <div className="case-label">Results</div>
+              <div className="case-text">{caseStudyProject.caseStudy.results}</div>
+            </div>
+            <div className="case-actions">
+              <a href={caseStudyProject.url} target="_blank" rel="noreferrer" className="recruiter-btn">GitHub ↗</a>
+              {caseStudyProject.demoUrl && (
+                <a href={caseStudyProject.demoUrl} target="_blank" rel="noreferrer" className="recruiter-btn recruiter-btn--primary">Live demo ↗</a>
+              )}
+            </div>
+          </div>
         </div>
       )}
     </div>
