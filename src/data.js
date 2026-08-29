@@ -30,7 +30,7 @@ export const data = {
       [{ c: '', t: '             ' }, { c: 'op', t: '>>' }, { c: '', t: ' validate' }],
     ],
   },
-  bio: 'Software Engineering student who turns raw data into production pipelines and decisions. Currently a Web Scraping & Data Engineering Intern at Equifax\'s Global Business Services (GBS). Previously built data solutions over datasets of 100,000+ records for DHL\'s Accounts Receivable team, where I re-engineered a critical pipeline and cut its execution time by 75% — a solution now scaling across 8 South American countries. I ship end-to-end data systems — orchestrated with Airflow, streamed with Kafka, modeled with dbt — backed by 11 open-source projects.',
+  bio: 'Software Engineering student who turns raw data into production pipelines and decisions. Currently a Web Scraping & Data Engineering Intern at Equifax\'s Global Business Services (GBS). Previously built data solutions over datasets of 100,000+ records for DHL\'s Accounts Receivable team, where I re-engineered a critical pipeline and cut its execution time by 75% — a solution now scaling across 8 South American countries. I ship end-to-end data systems — orchestrated with Airflow, streamed with Kafka, modeled with dbt — backed by 10 open-source projects.',
   email: 'perezcastroyus23@gmail.com',
   linkedin: 'https://linkedin.com/in/yustin-prz',
   github: 'https://github.com/yustin-prz',
@@ -46,7 +46,7 @@ export const data = {
   ],
   // value/suffix split so the hero stats can animate with a count-up effect
   stats: [
-    { value: 11, suffix: '', label: 'Projects published' },
+    { value: 10, suffix: '', label: 'Projects published' },
     { value: 100, suffix: 'k+', label: 'Records per dataset' },
     { value: 7, suffix: '', label: 'Certifications' },
   ],
@@ -282,16 +282,6 @@ export const data = {
         approach: 'Engineered 7 derived features on top of the original 13 — a composite 0-100 wellbeing index, a risk score and risk level from averaged stress + anxiety + addiction, and segments for sleep quality and social-media usage intensity — then built a 4-page interactive Power BI dashboard (overview, social media vs. mental health, sleep vs. academics, risk profile) with cross-filtering slicers by platform, gender and age group and conditional formatting to surface high-risk segments visually.',
         results: 'Segmented 23.7% of respondents into the high-risk bucket (wellbeing index 34.9/100, stress and anxiety near 8/10), found teens using both Instagram and TikTok reported the highest stress and anxiety of any platform group, and quantified that more screen time before sleep correlates with lower GPA — turning a flat survey dataset into an actionable risk-segmentation view.',
       },
-    },
-    {
-      emoji: '🔍',
-      type: 'Web Scraping · Analysis',
-      category: 'Data Engineering',
-      name: 'CR Job Market Analysis',
-      highlight: 'Multi-source scraping pipeline',
-      desc: 'Multi-source data collection pipeline using Selenium and JSearch API. Analyzes most demanded skills and top hiring companies in Costa Rica\'s data job market.',
-      tech: ['Selenium', 'Python', 'JSearch API', 'Pandas'],
-      url: 'https://github.com/yustin-prz/cr-jobs-market-analysis',
     },
   ],
   // Order of the Projects filter tabs ("All" is prepended in the component)
